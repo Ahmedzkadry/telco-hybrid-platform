@@ -1,0 +1,12 @@
+name: 'telco'
+version: '1.0.0'
+config-version: 2
+profile: 'telco'
+
+model-paths: ["models"]
+test-paths: ["tests"]
+
+models:
+  telco:
+    gold:
+      +materialized: table

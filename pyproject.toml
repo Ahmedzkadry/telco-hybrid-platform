@@ -1,0 +1,57 @@
+[project]
+name = "project-3"
+version = "0.1.0"
+description = "Telecom churn hybrid data and ML platform"
+readme = "README.md"
+authors = [
+    { name = "Ahmed", email = "bedohere23@gmail.com" }
+]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi>=0.165.0",
+    "joblib>=1.6.0",
+    "kafka-python>=2.0.2",
+    "numpy",
+    "pandas>=2.2,<3",
+    "psycopg2-binary>=2.9",
+    "pyspark==3.5.3",
+    "python-dotenv>=1.0",
+    "requests>=2.34.2",
+    "scikit-learn>=1.9.1",
+    "streamlit>=1.67.0",
+    "uvicorn[standard]>=0.54.0",
+]
+
+[project.scripts]
+project-3 = "project_3:main"
+
+[build-system]
+requires = ["uv_build>=0.12.23,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "black>=26.10.1",
+    "httpx>=0.28.1",
+    "pre-commit>=4.7.0",
+    "pytest>=9.2.0",
+    "ruff>=0.17.6",
+]
+[tool.black]
+line-length = 100
+target-version = ["py312"]
+extend-exclude = '''
+/(data|artifacts|dbt/telco/target|dbt/telco/logs)/
+'''
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+extend-exclude = ["data", "artifacts", "dbt/telco/target"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]   # style errors, unused code, import order
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

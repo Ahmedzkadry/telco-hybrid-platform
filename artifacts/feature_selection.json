@@ -1,0 +1,23 @@
+{
+  "method": "filter (ANOVA F-test)",
+  "k": 6,
+  "f_scores": {
+    "tenure_months": 1411.25,
+    "autopay": 612.54,
+    "monthly_fee": 237.52,
+    "late_payments_30d": 116.33,
+    "support_calls_30d": 12.99,
+    "avg_daily_data_gb": 9.05,
+    "avg_daily_minutes": 7.02,
+    "days_since_last_activity": 1.15,
+    "age": 0.0
+  },
+  "final_selected": [
+    "tenure_months",
+    "autopay",
+    "monthly_fee",
+    "late_payments_30d",
+    "support_calls_30d",
+    "avg_daily_data_gb"
+  ]
+}

@@ -1,0 +1,27 @@
+
+# secrets and environments
+.env
+.venv/
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# generated data and artifacts
+data/batch_data/
+data/stream_data/*.csv
+data/bronze/
+data/silver/
+data/checkpoints/
+artifacts/*.joblib
+
+# dbt
+dbt/telco/target/
+dbt/telco/logs/
+
+# misc
+stream.log
+.ruff_cache/
+.pytest_cache/

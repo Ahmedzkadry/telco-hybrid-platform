@@ -1,0 +1,8 @@
+﻿version: 2
+
+sources:
+  - name: telco_raw
+    schema: raw
+    tables:
+      - name: customers
+      - name: daily_activity
